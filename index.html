@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>$CHAD - The AI Meme Revolution</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,10 +12,11 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Orbitron', sans-serif;
-      color: #00f6ff;
-      background: #000;
+      font-family: 'Chakra Petch', sans-serif;
+      background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+      color: #00ffff;
       overflow-x: hidden;
+      position: relative;
     }
     .bg-video {
       position: fixed;
@@ -25,125 +26,69 @@
       height: 100vh;
       object-fit: cover;
       z-index: -1;
-      opacity: 0.08;
+      opacity: 0.25;
     }
-    header {
+    .container {
+      padding: 100px 20px 40px;
       text-align: center;
-      padding: 80px 20px 40px;
-      color: #00f6ff;
-      text-shadow: 0 0 12px #00f6ff;
     }
     h1 {
       font-size: 2.8rem;
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+      margin-bottom: 15px;
     }
     h2 {
-      margin-top: 1rem;
+      color: #fff;
       font-size: 1.5rem;
-      color: white;
-      text-shadow: 0 0 6px #fff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 5px #fff;
+    }
+    p {
+      margin: 10px 0;
+      font-size: 1rem;
     }
     .wallet-box {
-      background: rgba(0, 0, 0, 0.8);
-      border: 1px solid #00f6ff;
-      box-shadow: 0 0 15px #00f6ff;
-      padding: 20px;
-      margin: 30px auto;
-      max-width: 400px;
+      background: #000;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 20px #00ffff;
       border-radius: 12px;
-      text-align: center;
-    }
-    .wallet-box p {
-      margin: 10px 0;
-      font-size: 1.1rem;
+      padding: 20px;
+      margin: 0 auto 40px;
+      width: 90%;
+      max-width: 400px;
     }
     .copy-btn {
-      background: #00f6ff;
+      background: #00ffff;
+      color: #000;
       border: none;
       padding: 10px 20px;
-      color: black;
-      font-weight: bold;
-      border-radius: 6px;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s;
+      border-radius: 6px;
+      margin-top: 10px;
+      font-weight: bold;
+      transition: 0.3s;
     }
     .copy-btn:hover {
-      background: #00d2dd;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-    section h3 {
-      font-size: 1.8rem;
-      color: white;
-      text-shadow: 0 0 5px #fff;
-      margin-bottom: 20px;
-    }
-    section p {
-      font-size: 1rem;
-      color: #00f6ff;
-      line-height: 1.6;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #666;
+      background: #00dddd;
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop class="bg-video">
-    <source src="https://cdn.pixabay.com/vimeo/772263865/ai-139658.mp4" type="video/mp4" />
+  <video class="bg-video" autoplay muted loop>
+    <source src="https://cdn.pixabay.com/video/2023/10/25/191544-877676353_large.mp4" type="video/mp4">
   </video>
-
-  <header>
+  <div class="container">
     <h1>$CHAD - The AI Meme Revolution</h1>
     <h2>Presale Now Live</h2>
-  </header>
-
-  <div class="wallet-box">
-    <p><strong>Wallet Address:</strong></p>
-    <p id="wallet">0x1111111111111111111111111111111111111111</p>
-    <p>1 BNB = 2,000,000 CHAD</p>
-    <button class="copy-btn" onclick="copyWallet()">Copy Address</button>
+    <p>Send BNB to the address below:</p>
+    <div class="wallet-box">
+      <p><strong>Wallet Address:</strong></p>
+      <div class="address" id="wallet">0x1111111111111111111111111111111111111111</div>
+      <p>1 BNB = 2,000,000 CHAD</p>
+      <button class="copy-btn" onclick="copyWallet()">Copy Address</button>
+    </div>
   </div>
-
-  <section>
-    <h3>What is $CHAD?</h3>
-    <p>$CHAD is the ultimate AI-powered meme coin, combining cutting-edge tech with internet culture.<br/> Made for the bold. Built for the memes. Backed by code.</p>
-  </section>
-
-  <section>
-    <h3>Why $CHAD?</h3>
-    <p>
-      🚀 AI-Powered Growth<br/>
-      👤 Community First<br/>
-      ⚖️ 100% Decentralized - No VC Presale<br/>
-      ✨ Trending-Ready Branding
-    </p>
-  </section>
-
-  <section>
-    <h3>Roadmap</h3>
-    <p>
-      Phase 1: Launch & Presale<br/>
-      Phase 2: Token Deployment + Liquidity<br/>
-      Phase 3: Influencer Campaign + CEX Listing<br/>
-      Phase 4: $CHAD AI Tools + NFTs
-    </p>
-  </section>
-
-  <section>
-    <h3>Join the Revolution</h3>
-    <p>Follow us on Telegram and Twitter.<br/> Be part of the strongest meme army of 2025.</p>
-  </section>
-
-  <footer>
-    &copy; 2025 $CHAD. All rights reserved.
-  </footer>
-
   <script>
     function copyWallet() {
       const address = document.getElementById("wallet").innerText;
