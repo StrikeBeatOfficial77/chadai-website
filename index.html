@@ -1,100 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>$CHAD - The AI Meme Revolution</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    body {
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(to bottom, #000000, #0a0a0a);
-      color: #00fff7;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    }
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #00ffcc;
       text-align: center;
-      flex-direction: column;
       padding: 2rem;
     }
-
     h1 {
-      font-size: 3rem;
-      text-shadow: 0 0 15px #00fff7, 0 0 30px #00fff7;
-    }
-
-    h2 {
-      color: #ffffff;
-      margin-top: 1rem;
-      text-shadow: 0 0 5px #fff;
-    }
-
-    .subtitle {
-      font-size: 1rem;
-      color: #0ff;
-      margin: 1rem 0 2rem;
-    }
-
-    .wallet-box {
-      background: #000;
-      padding: 1.5rem 2rem;
-      border-radius: 12px;
-      border: 2px solid #00fff7;
-      box-shadow: 0 0 30px #00fff7;
-      display: inline-block;
-    }
-
-    .wallet-box p {
-      color: #fff;
+      font-size: 2.2rem;
+      color: #00ffcc;
       margin-bottom: 1rem;
     }
-
-    .wallet-address {
-      font-family: monospace;
-      color: #0ff;
+    h2 {
+      color: white;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
     }
-
-    button {
-      padding: 0.6rem 1.2rem;
-      background: #00fff7;
+    .timer {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      color: #00ffcc;
+    }
+    .buy-button {
+      padding: 0.8rem 1.6rem;
+      background: #00ff88;
       color: #000;
-      border: none;
       font-weight: bold;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
-      border-radius: 8px;
-      transition: background 0.3s;
+      font-size: 1rem;
+      margin-bottom: 2rem;
     }
-
-    button:hover {
-      background: #00cccc;
+    .wallet {
+      background: rgba(0,0,0,0.7);
+      padding: 1rem;
+      border-radius: 8px;
+      color: white;
+      max-width: 500px;
+      margin: auto;
+      margin-bottom: 2rem;
+    }
+    .wallet input {
+      background: #111;
+      color: #00ffcc;
+      border: none;
+      padding: 0.5rem;
+      width: 100%;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .icons {
+      margin-top: 1.5rem;
+    }
+    .icons img {
+      width: 36px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    .whitepaper {
+      display: block;
+      margin-top: 2rem;
+      color: #aaa;
+      font-size: 0.9rem;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h1>$CHAD - The AI Meme Revolution</h1>
-  <h2>Presale Now Live</h2>
-  <p class="subtitle">Send BNB to the address below to join the revolution 👇</p>
+  <h1>$CHAD</h1>
+  <h2>The AI Meme Revolution</h2>
 
-  <div class="wallet-box">
-    <p><strong>Wallet Address:</strong></p>
-    <p class="wallet-address" id="wallet">0x1111111111111111111111111111111111111111</p>
-    <p>1 BNB = 2,000,000 CHAD</p>
-    <button onclick="copyWallet()">Copy Address</button>
+  <div class="timer">
+    PRESALE ENDS IN <br />
+    <span id="countdown">05 : 11 : 36</span>
   </div>
 
-  <script>
-    function copyWallet() {
-      const wallet = document.getElementById("wallet").innerText;
-      navigator.clipboard.writeText(wallet);
-      alert("Wallet address copied!");
-    }
-  </script>
+  <button class="buy-button">BUY NOW</button>
+
+  <div class="wallet">
+    <p>Send BNB to the address below</p>
+    <input type="text" value="0x1111111111111111111111111111111111111111" readonly />
+    <p>1 BNB = 2,000,000 CHAD</p>
+  </div>
+
+  <div class="icons">
+    <img src="telegram.png" alt="Telegram" />
+    <img src="x.png" alt="Twitter" />
+    <img src="website.png" alt="Website" />
+  </div>
+
+  <a href="#" class="whitepaper">Download Whitepaper &#8681;</a>
+
 </body>
 </html>
