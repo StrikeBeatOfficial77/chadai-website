@@ -3,107 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>$CHAD - The AI Meme Revolution</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <title>$CHAD - AI Futuristic Crypto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Orbitron', sans-serif;
-    }
     body {
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #00ffcc;
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #00fff7;
+      overflow-x: hidden;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 2rem;
+      position: relative;
+      padding: 0 20px;
     }
-    h1 {
-      font-size: 2.2rem;
-      color: #00ffcc;
-      margin-bottom: 1rem;
+    .hero h1 {
+      font-size: 4em;
+      margin-bottom: 0.2em;
+      background: linear-gradient(90deg, #00fff7, #ff00c8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    h2 {
-      color: white;
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin-bottom: 1.5em;
+      color: #ccc;
     }
-    .timer {
-      font-size: 1.6rem;
-      margin-bottom: 1.5rem;
-      color: #00ffcc;
-    }
-    .buy-button {
-      padding: 0.8rem 1.6rem;
-      background: #00ff88;
+    .btn {
+      background: #00fff7;
       color: #000;
-      font-weight: bold;
       border: none;
-      border-radius: 6px;
+      padding: 15px 30px;
+      font-size: 1.1em;
       cursor: pointer;
-      font-size: 1rem;
-      margin-bottom: 2rem;
+      border-radius: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .wallet {
-      background: rgba(0,0,0,0.7);
-      padding: 1rem;
-      border-radius: 8px;
-      color: white;
-      max-width: 500px;
-      margin: auto;
-      margin-bottom: 2rem;
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00fff7;
     }
-    .wallet input {
-      background: #111;
-      color: #00ffcc;
-      border: none;
-      padding: 0.5rem;
-      width: 100%;
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
+    .socials {
+      margin-top: 2em;
     }
-    .icons {
-      margin-top: 1.5rem;
-    }
-    .icons img {
-      width: 36px;
+    .socials img {
+      width: 40px;
       margin: 0 10px;
+      filter: drop-shadow(0 0 5px #00fff7);
       cursor: pointer;
     }
-    .whitepaper {
-      display: block;
-      margin-top: 2rem;
-      color: #aaa;
-      font-size: 0.9rem;
-      text-decoration: none;
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5em; }
+      .hero p { font-size: 1em; }
     }
   </style>
 </head>
 <body>
-  <h1>$CHAD</h1>
-  <h2>The AI Meme Revolution</h2>
-
-  <div class="timer">
-    PRESALE ENDS IN <br />
-    <span id="countdown">05 : 11 : 36</span>
-  </div>
-
-  <button class="buy-button">BUY NOW</button>
-
-  <div class="wallet">
-    <p>Send BNB to the address below</p>
-    <input type="text" value="0x1111111111111111111111111111111111111111" readonly />
-    <p>1 BNB = 2,000,000 CHAD</p>
-  </div>
-
-  <div class="icons">
-    <img src="telegram.png" alt="Telegram" />
-    <img src="x.png" alt="Twitter" />
-    <img src="website.png" alt="Website" />
-  </div>
-
-  <a href="#" class="whitepaper">Download Whitepaper &#8681;</a>
-
+  <section class="hero">
+    <h1>$CHAD</h1>
+    <p>The most advanced AI-powered crypto from the future. Be part of the revolution.</p>
+    <button class="btn">Join Presale</button>
+    <div class="socials">
+      <img src="telegram.png" alt="Telegram">
+      <img src="x.png" alt="Twitter">
+      <img src="website.png" alt="Website">
+    </div>
+  </section>
 </body>
 </html>
