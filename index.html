@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>$CHAD - The AI Meme Revolution</title>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,90 +12,53 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Chakra Petch', sans-serif;
-      background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
-      color: #00ffff;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(180deg, #000000, #050505);
+      color: #00f9ff;
       overflow-x: hidden;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 2rem;
+      background: url('https://cdn.pixabay.com/vimeo/772263865/ai-139658.mp4') no-repeat center center/cover;
+      background-blend-mode: darken;
       position: relative;
     }
-    .bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-      opacity: 0.25;
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 0;
     }
-    .container {
-      padding: 100px 20px 40px;
-      text-align: center;
+    .hero-content {
+      position: relative;
+      z-index: 1;
     }
-    h1 {
-      font-size: 2.8rem;
-      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-      margin-bottom: 15px;
+    .hero h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 20px #00f9ff;
+      margin-bottom: 1rem;
     }
-    h2 {
-      color: #fff;
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 5px #fff;
-    }
-    p {
-      margin: 10px 0;
-      font-size: 1rem;
-    }
-    .wallet-box {
-      background: #000;
-      border: 2px solid #00ffff;
-      box-shadow: 0 0 20px #00ffff;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 0 auto 40px;
-      width: 90%;
-      max-width: 400px;
-    }
-    .copy-btn {
-      background: #00ffff;
-      color: #000;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 6px;
-      margin-top: 10px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .copy-btn:hover {
-      background: #00dddd;
+    .hero p {
+      font-size: 1.2rem;
+      color: #ffffff;
+      text-shadow: 0 0 5px #00f9ff;
     }
   </style>
 </head>
 <body>
-  <video class="bg-video" autoplay muted loop>
-    <source src="https://cdn.pixabay.com/video/2023/10/25/191544-877676353_large.mp4" type="video/mp4">
-  </video>
-  <div class="container">
-    <h1>$CHAD - The AI Meme Revolution</h1>
-    <h2>Presale Now Live</h2>
-    <p>Send BNB to the address below:</p>
-    <div class="wallet-box">
-      <p><strong>Wallet Address:</strong></p>
-      <div class="address" id="wallet">0x1111111111111111111111111111111111111111</div>
-      <p>1 BNB = 2,000,000 CHAD</p>
-      <button class="copy-btn" onclick="copyWallet()">Copy Address</button>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>$CHAD - The AI Meme Revolution</h1>
+      <p>The future of memes is here. Powered by AI. Fueled by the internet.</p>
     </div>
-  </div>
-  <script>
-    function copyWallet() {
-      const address = document.getElementById("wallet").innerText;
-      navigator.clipboard.writeText(address).then(() => {
-        alert("Wallet address copied!");
-      });
-    }
-  </script>
+  </section>
 </body>
 </html>
