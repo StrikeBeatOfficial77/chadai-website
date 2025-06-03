@@ -3,90 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>$CHAD - The AI Meme Revolution</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <title>$CHAD - The Future Coin</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Orbitron', sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
+      background-image: url('background.png');
       background-size: cover;
-      color: #00ffe7;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      color: #00ffff;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
-      text-align: center;
+      align-items: center;
+      text-align: left;
+      padding: 2rem;
+      background-color: #000000e0;
     }
+
+    .content {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      border-radius: 20px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 0 20px #00ffff80;
+    }
+
     h1 {
       font-size: 2.5rem;
-      text-shadow: 0 0 15px #00ffe7;
+      margin-bottom: 1rem;
+      color: #00ffff;
     }
-    h2 {
-      font-size: 1.5rem;
-      color: #fff;
-      margin: 1rem 0;
-      text-shadow: 0 0 10px #ffffff88;
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #ccf9ff;
     }
-    .wallet-box {
-      background: rgba(0, 0, 0, 0.65);
-      padding: 20px 30px;
-      border-radius: 12px;
-      border: 2px solid #00ffe7;
-      box-shadow: 0 0 20px #00ffe7;
-      max-width: 400px;
-      width: 90%;
-      margin: 20px 0;
-    }
-    .wallet-box p {
-      margin: 10px 0;
-    }
-    .copy-btn {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #00ffe7;
-      color: #000;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .copy-btn:hover {
-      background-color: #00c3b4;
-    }
-    @media (max-width: 600px) {
+
+    @media (max-width: 768px) {
       h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
-      h2 {
-        font-size: 1.1rem;
+
+      p {
+        font-size: 1rem;
+      }
+
+      .content {
+        padding: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>$CHAD - The AI Meme Revolution</h1>
-  <h2>Presale Now Live</h2>
-  <p>Send BNB to the address below:</p>
-  <div class="wallet-box">
-    <p><strong>Wallet Address:</strong></p>
-    <p id="wallet">0x1111111111111111111111111111111111111111</p>
-    <p>1 BNB = 2,000,000 CHAD</p>
-    <button class="copy-btn" onclick="copyWallet()">Copy Address</button>
+  <div class="content">
+    <h1>Welcome to $CHAD</h1>
+    <p>The future of crypto has arrived. AI-driven. Community-powered. Designed for those who dare to lead the trend.</p>
   </div>
-
-  <script>
-    function copyWallet() {
-      const address = document.getElementById("wallet").innerText;
-      navigator.clipboard.writeText(address).then(() => {
-        alert("Wallet address copied!");
-      });
-    }
-  </script>
 </body>
 </html>
