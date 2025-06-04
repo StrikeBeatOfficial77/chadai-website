@@ -12,7 +12,6 @@
       background-size: cover;
       background-position: top center;
       background-repeat: no-repeat;
-      background-color: #000;
       padding-top: 80px;
       color: #e0e0e0;
       text-shadow: 0 0 5px #000;
@@ -85,6 +84,34 @@
       gap: 5px;
       text-shadow: 0 0 10px #00ffbf, 0 0 20px #00ffbf;
     }
+    .cta {
+      text-align: center;
+      margin-top: 60px;
+    }
+    .faq {
+      margin-top: 60px;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+    }
+    .faq-item h3 {
+      color: #00ffbf;
+      margin-bottom: 10px;
+    }
+    .faq-item p {
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+      header p {
+        font-size: 1.2em;
+      }
+      h2 {
+        font-size: 2em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -135,16 +162,25 @@
       </p>
     </section>
 
-    <section>
-      <h2>FAQs</h2>
-      <p><strong>What is $CHAD?</strong><br>$CHAD is a futuristic meme token powered by artificial intelligence.</p>
-      <p><strong>How do I buy $CHAD?</strong><br>Via PancakeSwap using BNB from a crypto wallet like MetaMask.</p>
-      <p><strong>Is it safe?</strong><br>Built on BSC with clear tokenomics, marketing, and burn strategies.</p>
+    <section class="cta">
+      <h2>Ready to ride the future?</h2>
+      <a href="https://t.me/YourChannel" class="btn">Get Started</a>
     </section>
 
-    <section>
-      <h2>Ready to Join the Future?</h2>
-      <a class="btn" href="https://t.me/YourChannel">Get $CHAD Now</a>
+    <section class="faq">
+      <h2>FAQ</h2>
+      <div class="faq-item">
+        <h3>What is $CHAD?</h3>
+        <p>$CHAD is the ultimate AI-powered meme token made to dominate trends and the blockchain space.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I buy $CHAD?</h3>
+        <p>Use PancakeSwap to swap your BNB for $CHAD – simple and fast.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there a community?</h3>
+        <p>Yes! Join our growing army on Telegram and Twitter to get the latest news and memes.</p>
+      </div>
     </section>
 
     <footer>
