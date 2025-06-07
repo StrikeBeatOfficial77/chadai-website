@@ -79,6 +79,17 @@
       width: 100%;
       color: white;
       box-shadow: 0 0 20px #00ffbf;
+      position: relative;
+    }
+    .close-modal {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 1.5em;
+      cursor: pointer;
     }
     .modal-content input, .modal-content select {
       width: 80%;
@@ -106,6 +117,13 @@
       padding: 8px 12px;
       border-radius: 8px;
       cursor: pointer;
+    }
+    .qr-code {
+      margin-top: 10px;
+    }
+    .qr-code img {
+      width: 150px;
+      height: 150px;
     }
     section {
       margin: 60px 0;
@@ -138,33 +156,6 @@
       gap: 5px;
       text-shadow: 0 0 10px #00ffbf, 0 0 20px #00ffbf;
     }
-    .cta {
-      text-align: center;
-      margin-top: 60px;
-    }
-    .faq {
-      margin-top: 60px;
-    }
-    .faq-item {
-      margin-bottom: 20px;
-    }
-    .faq-item h3 {
-      color: #00ffbf;
-      margin-bottom: 10px;
-    }
-    .faq-item p {
-      margin: 0;
-    }
-    .contract-links {
-      margin-top: 15px;
-    }
-    .contract-links a {
-      display: block;
-      margin-top: 5px;
-      color: #00ccff;
-      font-size: 1.1em;
-      text-decoration: underline;
-    }
     @media (max-width: 768px) {
       header h1 {
         font-size: 2.5em;
@@ -187,99 +178,45 @@
       <button onclick="openModal()" class="btn">Buy $CHAD Now</button>
     </header>
 
-    <section>
+    <section id="about">
       <h2>About $CHAD</h2>
-      <p>CHAD AI isn't just a meme token – it's a futuristic statement. Combining meme culture with the raw power of artificial intelligence, $CHAD is built to dominate the blockchain and rule the trendwaves.</p>
+      <p>$CHAD is the AI-powered meme token designed for explosive growth and viral momentum.</p>
     </section>
 
-    <section>
-      <h2>Why CHAD?</h2>
-      <p>Because every generation needs a token that laughs, learns, and levels up. CHAD AI adapts to market trends like a real chad. Not just hype – but pure intelligent chaos.</p>
-    </section>
-
-    <section>
+    <section id="tokenomics">
       <h2>Tokenomics</h2>
-      <p>
-        Total Supply: 10,000,000,000<br>
-        Owned by Dev: 5,000,000,000<br>
-        Presale + Liquidity: 5,000,000,000<br>
-        Tax: 5% (2% to Dev, 2% Marketing, 1% Burn)
-      </p>
+      <p>Total Supply: 11,000,000,000 $CHAD</p>
+      <p>Presale: 675,000,000 $CHAD</p>
+      <p>Marketing: 2%</p>
+      <p>Team Wallet: 2%</p>
+      <p>Burn: 1%</p>
     </section>
 
-    <section>
-      <h2>🚀 Why Buy Early?</h2>
-      <p>
-        Early buyers always win. When $CHAD goes viral, those who got in early will ride the wave to insane profits.<br>
-        This is your chance to be part of the next meme revolution — not just watch it happen.
-      </p>
-    </section>
-
-    <section>
-      <h2>What if $CHAD Hits $0.0001?</h2>
-      <p>
-        Investment: $10 → $6,666<br>
-        Investment: $50 → $33,333<br>
-        Investment: $100 → $66,666
-      </p>
-    </section>
-
-    <section>
+    <section id="roadmap">
       <h2>Roadmap</h2>
-      <p>
-        🔹 Q1: Token Creation + Website Launch<br>
-        🔹 Q2: Presale + PancakeSwap Listing<br>
-        🔹 Q3: Viral TikTok & Twitter Campaigns<br>
-        🔹 Q4: Partnerships, NFTs, and Beyond
-      </p>
+      <p>Q1: Launch & Presale | Q2: Listings & Marketing | Q3: Partnerships | Q4: AI Integration</p>
     </section>
 
-    <section>
+    <section id="how-to-buy">
+      <h2>How to Buy</h2>
+      <p>Connect your wallet, enter BNB amount, and confirm the transaction to receive $CHAD.</p>
+    </section>
+
+    <section id="trust">
       <h2>Trust & Transparency</h2>
-      <p>
-        ✅ Contract Verified on BSCScan<br>
-        ✅ Liquidity Locked<br>
-        ✅ 100% Community-Focused<br>
-        ✅ No Team Tokens
-      </p>
-      <div class="contract-links">
-        <a href="https://bscscan.com/token/yourtokenaddress">🔗 View Contract on BSCScan</a>
-        <a href="https://dx.app/app/v3/lock/yourlocklink">🔒 View Liquidity Lock</a>
-      </div>
-    </section>
-
-    <section class="cta">
-      <h2>Ready to ride the future?</h2>
-      <button onclick="openModal()" class="btn">Buy $CHAD Now</button>
-    </section>
-
-    <section class="faq">
-      <h2>FAQ</h2>
-      <div class="faq-item">
-        <h3>What is $CHAD?</h3>
-        <p>$CHAD is the ultimate AI-powered meme token made to dominate trends and the blockchain space.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How do I buy $CHAD?</h3>
-        <p>Use PancakeSwap to swap your BNB for $CHAD – simple and fast.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Is there a community?</h3>
-        <p>Yes! Join our growing army on Telegram and Twitter to get the latest news and memes.</p>
-      </div>
+      <p><a href="https://bscscan.com/token/0x..." target="_blank">View Contract on BSCScan</a></p>
+      <p><a href="https://dx.app/app/..." target="_blank">Liquidity Locked</a></p>
     </section>
 
     <footer>
-      <p>
-        <a href="https://t.me/chadai_xyz"><img src="telegram-icon.png" alt="Telegram" width="20"> Telegram</a>
-        <a href="https://twitter.com/chadai_xyz"><img src="twitter-icon.png" alt="Twitter" width="20"> Twitter</a>
-        <a href="mailto:contact@chadai.xyz"><img src="email-icon.png" alt="Email" width="20"> Contact</a>
-      </p>
+      <a href="https://t.me/ChadAiPortal" target="_blank">Telegram</a>
+      <a href="https://twitter.com/ChadAiToken" target="_blank">Twitter</a>
     </footer>
   </div>
 
   <div class="modal" id="purchaseModal">
     <div class="modal-content">
+      <button class="close-modal" onclick="closeModal()">×</button>
       <h2>Buy $CHAD</h2>
       <label>Amount to pay (BNB):</label>
       <input type="number" id="bnbAmount" placeholder="e.g. 0.05" step="0.001" min="0.001" oninput="updateEstimate()">
@@ -288,9 +225,9 @@
       <button onclick="buyToken()" class="btn">Confirm Purchase</button>
       <div class="note" style="margin-top:20px;">
         Prefer USDT? Send to address below from any wallet:<br>
-        <strong style="color:#00ffbf;">0xYourUSDTWalletAddressHere</strong><br>
+        <strong style="color:#00ffbf;">0x2cD3fB599E972e7B322fd11307E35E2847395261</strong><br>
         (USDT-BEP20)
-        <br>
+        <div class="qr-code"><img src="usdt-qr.png" alt="USDT QR Code"></div>
         <button class="copy-btn" onclick="copyUSDTAddress()">📋 Copy USDT Address</button>
       </div>
     </div>
@@ -299,6 +236,10 @@
   <script>
     function openModal() {
       document.getElementById('purchaseModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('purchaseModal').style.display = 'none';
     }
 
     function updateEstimate() {
@@ -322,7 +263,7 @@
       }
 
       if (typeof window.ethereum === 'undefined') {
-        alert("MetaMask is not installed! Please install it or use another BNB-compatible wallet.");
+        alert("MetaMask is not installed or not supported on this browser. Please use a BNB-compatible wallet.");
         return;
       }
 
@@ -342,7 +283,7 @@
         });
 
         alert("Transaction sent! Thank you for buying $CHAD.");
-        document.getElementById('purchaseModal').style.display = 'none';
+        closeModal();
       } catch (err) {
         console.error(err);
         alert("Transaction failed: " + err.message);
@@ -350,7 +291,7 @@
     }
 
     function copyUSDTAddress() {
-      const address = "0xYourUSDTWalletAddressHere";
+      const address = "0x2cD3fB599E972e7B322fd11307E35E2847395261";
       navigator.clipboard.writeText(address).then(() => {
         alert("USDT address copied to clipboard!");
       });
