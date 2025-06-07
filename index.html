@@ -18,6 +18,7 @@
       text-shadow: 0 0 5px #000;
       z-index: 0;
     }
+
     .container {
       max-width: 1200px;
       margin: auto;
@@ -50,6 +51,7 @@
       box-shadow: 0 0 15px #00ffbf;
       transition: all 0.3s ease;
       cursor: pointer;
+      border: none;
     }
     .btn:hover {
       background: #00ffee;
@@ -78,7 +80,7 @@
       color: white;
       box-shadow: 0 0 20px #00ffbf;
     }
-    .modal-content input {
+    .modal-content input, .modal-content select {
       width: 80%;
       padding: 10px;
       margin-top: 15px;
@@ -90,6 +92,20 @@
       margin-top: 10px;
       font-size: 1.1em;
       color: #00ffbf;
+    }
+    .modal-content .note {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #cccccc;
+    }
+    .copy-btn {
+      background: transparent;
+      color: #00ffbf;
+      border: 1px solid #00ffbf;
+      margin-top: 10px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
     }
     section {
       margin: 60px 0;
@@ -183,32 +199,49 @@
 
     <section>
       <h2>Tokenomics</h2>
-      <p>Total Supply: 10,000,000,000<br>Owned by Dev: 5,000,000,000<br>Presale + Liquidity: 5,000,000,000<br>Tax: 5% (2% to Dev, 2% Marketing, 1% Burn)</p>
+      <p>
+        Total Supply: 10,000,000,000<br>
+        Owned by Dev: 5,000,000,000<br>
+        Presale + Liquidity: 5,000,000,000<br>
+        Tax: 5% (2% to Dev, 2% Marketing, 1% Burn)
+      </p>
     </section>
 
     <section>
       <h2>🚀 Why Buy Early?</h2>
-      <p>Early buyers always win. When $CHAD goes viral, those who got in early will ride the wave to insane profits.<br>This is your chance to be part of the next meme revolution — not just watch it happen.</p>
+      <p>
+        Early buyers always win. When $CHAD goes viral, those who got in early will ride the wave to insane profits.<br>
+        This is your chance to be part of the next meme revolution — not just watch it happen.
+      </p>
     </section>
 
     <section>
       <h2>What if $CHAD Hits $0.0001?</h2>
-      <p>Investment: $10 → $6,666<br>Investment: $50 → $33,333<br>Investment: $100 → $66,666</p>
+      <p>
+        Investment: $10 → $6,666<br>
+        Investment: $50 → $33,333<br>
+        Investment: $100 → $66,666
+      </p>
     </section>
 
     <section>
       <h2>Roadmap</h2>
-      <p>🔹 Q1: Token Creation + Website Launch<br>🔹 Q2: Presale + PancakeSwap Listing<br>🔹 Q3: Viral TikTok & Twitter Campaigns<br>🔹 Q4: Partnerships, NFTs, and Beyond</p>
-    </section>
-
-    <section id="how-to-buy">
-      <h2>How to Buy</h2>
-      <p>1. Get BNB in your wallet (like MetaMask)<br>2. Go to PancakeSwap and import $CHAD<br>3. Swap BNB for $CHAD<br>4. HODL and Join the AI Meme Revolution</p>
+      <p>
+        🔹 Q1: Token Creation + Website Launch<br>
+        🔹 Q2: Presale + PancakeSwap Listing<br>
+        🔹 Q3: Viral TikTok & Twitter Campaigns<br>
+        🔹 Q4: Partnerships, NFTs, and Beyond
+      </p>
     </section>
 
     <section>
       <h2>Trust & Transparency</h2>
-      <p>✅ Contract Verified on BSCScan<br>✅ Liquidity Locked<br>✅ 100% Community-Focused<br>✅ No Team Tokens</p>
+      <p>
+        ✅ Contract Verified on BSCScan<br>
+        ✅ Liquidity Locked<br>
+        ✅ 100% Community-Focused<br>
+        ✅ No Team Tokens
+      </p>
       <div class="contract-links">
         <a href="https://bscscan.com/token/yourtokenaddress">🔗 View Contract on BSCScan</a>
         <a href="https://dx.app/app/v3/lock/yourlocklink">🔒 View Liquidity Lock</a>
@@ -248,9 +281,18 @@
   <div class="modal" id="purchaseModal">
     <div class="modal-content">
       <h2>Buy $CHAD</h2>
-      <input type="number" id="bnbAmount" placeholder="Enter BNB amount" step="0.001" min="0.001" oninput="updateEstimate()">
+      <label>Amount to pay (BNB):</label>
+      <input type="number" id="bnbAmount" placeholder="e.g. 0.05" step="0.001" min="0.001" oninput="updateEstimate()">
       <div class="calc" id="tokenEstimate"></div>
+      <div class="note">💡 You are paying with BNB (BEP-20). Make sure your wallet is connected.</div>
       <button onclick="buyToken()" class="btn">Confirm Purchase</button>
+      <div class="note" style="margin-top:20px;">
+        Prefer USDT? Send to address below from any wallet:<br>
+        <strong style="color:#00ffbf;">0xYourUSDTWalletAddressHere</strong><br>
+        (USDT-BEP20)
+        <br>
+        <button class="copy-btn" onclick="copyUSDTAddress()">📋 Copy USDT Address</button>
+      </div>
     </div>
   </div>
 
@@ -280,7 +322,7 @@
       }
 
       if (typeof window.ethereum === 'undefined') {
-        alert("MetaMask is not installed!");
+        alert("MetaMask is not installed! Please install it or use another BNB-compatible wallet.");
         return;
       }
 
@@ -305,6 +347,13 @@
         console.error(err);
         alert("Transaction failed: " + err.message);
       }
+    }
+
+    function copyUSDTAddress() {
+      const address = "0xYourUSDTWalletAddressHere";
+      navigator.clipboard.writeText(address).then(() => {
+        alert("USDT address copied to clipboard!");
+      });
     }
   </script>
 </body>
