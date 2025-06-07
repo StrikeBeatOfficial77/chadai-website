@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CHAD AI - The Future Meme Token</title>
   <style>
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      z-index: -2;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -15,6 +24,7 @@
       padding-top: 80px;
       color: #e0e0e0;
       text-shadow: 0 0 5px #000;
+      z-index: -1;
     }
     .container {
       max-width: 1200px;
@@ -47,6 +57,7 @@
       border-radius: 10px;
       box-shadow: 0 0 15px #00ffbf;
       transition: all 0.3s ease;
+      cursor: pointer;
     }
     .btn:hover {
       background: #00ffee;
@@ -111,6 +122,14 @@
       font-size: 1.1em;
       text-decoration: underline;
     }
+    #bnbAmount {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
     @media (max-width: 768px) {
       header h1 {
         font-size: 2.5em;
@@ -130,7 +149,9 @@
       <h1>$CHAD AI</h1>
       <p>Buy $CHAD Before It Goes Viral 🚀</p>
       <p style="color:white;">A token built to multiply your money with memes + AI. Simple, fast, viral.</p>
-      <a href="#how-to-buy" class="btn">Buy $CHAD Now</a>
+      <input type="number" id="bnbAmount" placeholder="Enter BNB amount" step="0.001" min="0.001">
+      <br>
+      <button onclick="buyToken()" class="btn">Buy $CHAD Now</button>
     </header>
 
     <section>
@@ -233,5 +254,39 @@
       </p>
     </footer>
   </div>
+
+  <script>
+    async function buyToken() {
+      const toAddress = "0x2cD3fB599E972e7B322fd11307E35E2847395261";
+      const amountInBNB = document.getElementById("bnbAmount").value;
+
+      if (!amountInBNB || isNaN(amountInBNB) || parseFloat(amountInBNB) <= 0) {
+        alert("Please enter a valid BNB amount.");
+        return;
+      }
+
+      if (typeof window.ethereum !== 'undefined') {
+        try {
+          const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+          const from = accounts[0];
+
+          await ethereum.request({
+            method: 'eth_sendTransaction',
+            params: [{
+              from,
+              to: toAddress,
+              value: (parseFloat(amountInBNB) * 1e18).toString(16)
+            }],
+          });
+
+          alert('Transaction sent!');
+        } catch (err) {
+          alert('Transaction failed: ' + err.message);
+        }
+      } else {
+        alert('Please install MetaMask to buy $CHAD!');
+      }
+    }
+  </script>
 </body>
 </html>
