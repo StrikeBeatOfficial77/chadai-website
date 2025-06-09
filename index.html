@@ -6,6 +6,42 @@
   <title>CHAD AI - The Future Meme Token</title>
   <style>
     body {
+      <!-- Countdown Section -->
+<div style="background: rgba(0, 0, 0, 0.8); padding: 40px 20px; text-align: center; border-bottom: 2px solid #00ffbf;">
+  <h2 style="color: #00ffbf; font-size: 2.2em; text-shadow: 0 0 15px #00ffbf;">
+    Buy $CHAD at the Lowest Price Ever – Before It Explodes!
+  </h2>
+  <p style="font-size: 1.2em; color: #eee;">
+    🎯 This is your only chance to grab $CHAD at early presale price.<br>
+    ⏳ Once the timer hits zero, the official launch price will be much higher.
+  </p>
+  <div id="countdown" style="font-size: 2.5em; font-weight: bold; color: #00ffbf; margin-top: 20px;"></div>
+</div>
+
+<script>
+  const countdown = () => {
+    const end = new Date("2025-06-19T02:33:36").getTime();
+    const now = new Date().getTime();
+    const distance = end - now;
+
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "🚀 Launch Time!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  };
+
+  setInterval(countdown, 1000);
+  countdown();
+</script>
+
       margin: 0;
       font-family: Arial, sans-serif;
       background: #000;
