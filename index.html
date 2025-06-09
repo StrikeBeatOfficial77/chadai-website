@@ -147,6 +147,14 @@
       background-color: rgba(0, 0, 0, 0.7);
       z-index: 9998;
     }
+    .close-icon {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
   </style>
   <script>
     function openPopup() {
@@ -161,11 +169,12 @@
       const price = 0.0000075;
       const amount = parseFloat(document.getElementById('amount').value);
       const tokens = amount / price;
-      document.getElementById('result').innerText = 'You will get ≈ ' + Math.floor(tokens).toLocaleString() + ' $CHAD';
+      document.getElementById('result').innerText = 'You will get \u2248 ' + Math.floor(tokens).toLocaleString() + ' $CHAD';
     }
     function copyAddress() {
       const selected = document.getElementById('currency').value;
       const address = '0x2cD3fB599E972e7B322fd11307E35E2847395261';
+      document.getElementById('wallet-address').innerText = address;
       navigator.clipboard.writeText(address);
       alert('Address copied for ' + selected);
     }
@@ -174,6 +183,7 @@
 <body>
   <div id="overlay" onclick="closePopup()"></div>
   <div id="popup">
+    <span class="close-icon" onclick="closePopup()">&times;</span>
     <h2>Buy $CHAD</h2>
     <p>Presale Price: 1 $CHAD = $0.0000075</p>
     <input type="number" id="amount" placeholder="Enter amount (USD)" oninput="calculateTokens()" />
@@ -186,13 +196,14 @@
       <option>USDC (BEP-20)</option>
       <option>DAI (BEP-20)</option>
     </select><br>
+    <p id="wallet-address" style="margin: 10px 0; font-weight: bold;"></p>
     <button onclick="copyAddress()">Copy Wallet Address</button><br>
-    <button onclick="closePopup()">Close</button>
+    <p style="margin-top: 10px; font-size: 0.95em;">Copy the wallet address and send the desired amount to it.</p>
   </div>
   <div class="container">
     <header>
       <h1>$CHAD AI</h1>
-      <p>Buy $CHAD Before It Goes Viral 🚀</p>
+      <p>Buy $CHAD Before It Goes Viral \ud83d\ude80</p>
       <p style="color:white;">A token built to multiply your money with memes + AI. Simple, fast, viral.</p>
       <div class="popup-btn" onclick="openPopup()">Buy $CHAD Now</div>
     </header>
@@ -218,7 +229,7 @@
     </section>
 
     <section>
-      <h2>🚀 Why Buy Early?</h2>
+      <h2>\ud83d\ude80 Why Buy Early?</h2>
       <p>
         Early buyers always win. When $CHAD goes viral, those who got in early will ride the wave to insane profits.<br>
         This is your chance to be part of the next meme revolution — not just watch it happen.
@@ -237,20 +248,20 @@
     <section>
       <h2>Roadmap</h2>
       <p>
-        🔹 Q1: Token Creation + Website Launch<br>
-        🔹 Q2: Presale + PancakeSwap Listing<br>
-        🔹 Q3: Viral TikTok & Twitter Campaigns<br>
-        🔹 Q4: Partnerships, NFTs, and Beyond
+        \ud83d\udd39 Q1: Token Creation + Website Launch<br>
+        \ud83d\udd39 Q2: Presale + PancakeSwap Listing<br>
+        \ud83d\udd39 Q3: Viral TikTok & Twitter Campaigns<br>
+        \ud83d\udd39 Q4: Partnerships, NFTs, and Beyond
       </p>
     </section>
 
     <section id="how-to-buy">
       <h2>How to Buy</h2>
       <p>
-        1. أدخل المبلغ الذي تريد دفعه بالدولار أو العملات المدعومة<br>
-        2. اختر العملة المناسبة للدفع (BNB، USDT، وغيرها)<br>
-        3. انسخ عنوان المحفظة وأرسل إليه المبلغ<br>
-        4. سيتم تحويل التوكنات إليك بعد التحقق من الدفع
+        1. Enter the amount you want to invest (USD)<br>
+        2. Choose a currency to pay (BNB, USDT, etc.)<br>
+        3. Copy the wallet address and send the funds<br>
+        4. You will receive your tokens after payment is confirmed
       </p>
     </section>
 
@@ -263,8 +274,8 @@
         ✅ No Team Tokens
       </p>
       <div class="contract-links">
-        <a href="https://bscscan.com/token/yourtokenaddress">🔗 View Contract on BSCScan</a>
-        <a href="https://dx.app/app/v3/lock/yourlocklink">🔒 View Liquidity Lock</a>
+        <a href="https://bscscan.com/token/yourtokenaddress">\ud83d\udd17 View Contract on BSCScan</a>
+        <a href="https://dx.app/app/v3/lock/yourlocklink">\ud83d\udd12 View Liquidity Lock</a>
       </div>
     </section>
 
