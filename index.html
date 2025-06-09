@@ -124,7 +124,11 @@
       z-index: 9999;
       border-radius: 12px;
       text-align: center;
-      max-width: 90%;
+      width: 90%;
+      max-width: 500px;
+      height: auto;
+      max-height: 500px;
+      overflow: auto;
       color: white;
     }
     #popup select, #popup input {
@@ -134,8 +138,19 @@
       border-radius: 8px;
       border: none;
     }
-    #popup button {
+    #popup .copy-btn {
+      display: inline-block;
+      background: #00ccff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
       margin-top: 10px;
+    }
+    #popup .copy-btn:hover {
+      background: #00aacc;
     }
     #overlay {
       position: fixed;
@@ -169,7 +184,7 @@
       const price = 0.0000075;
       const amount = parseFloat(document.getElementById('amount').value);
       const tokens = amount / price;
-      document.getElementById('result').innerText = 'You will get \u2248 ' + Math.floor(tokens).toLocaleString() + ' $CHAD';
+      document.getElementById('result').innerText = 'You will get ≈ ' + Math.floor(tokens).toLocaleString() + ' $CHAD';
     }
     function copyAddress() {
       const selected = document.getElementById('currency').value;
@@ -196,117 +211,116 @@
       <option>USDC (BEP-20)</option>
       <option>DAI (BEP-20)</option>
     </select><br>
-    <p id="wallet-address" style="margin: 10px 0; font-weight: bold;"></p>
-    <button onclick="copyAddress()">Copy Wallet Address</button><br>
+    <p id="wallet-address" style="margin: 10px 0; font-weight: bold; font-size: 1.1em;">0x2cD3fB599E972e7B322fd11307E35E2847395261</p>
+    <button class="copy-btn" onclick="copyAddress()">Copy Wallet Address</button><br>
     <p style="margin-top: 10px; font-size: 0.95em;">Copy the wallet address and send the desired amount to it.</p>
   </div>
   <div class="container">
     <header>
       <h1>$CHAD AI</h1>
-      <p>Buy $CHAD Before It Goes Viral \ud83d\ude80</p>
-      <p style="color:white;">A token built to multiply your money with memes + AI. Simple, fast, viral.</p>
+      <p>Buy $CHAD Before It Goes Viral 🚀</p>
+      <p style="color:white;">The ultimate meme token powered by AI – fast, fun, and built for the future.</p>
       <div class="popup-btn" onclick="openPopup()">Buy $CHAD Now</div>
     </header>
-
     <section>
-      <h2>About $CHAD</h2>
-      <p>CHAD AI isn't just a meme token – it's a futuristic statement. Combining meme culture with the raw power of artificial intelligence, $CHAD is built to dominate the blockchain and rule the trendwaves.</p>
-    </section>
+  <h2>About $CHAD</h2>
+  <p>CHAD AI isn't just a meme token – it's a futuristic statement. Combining meme culture with the raw power of artificial intelligence, $CHAD is built to dominate the blockchain and rule the trendwaves.</p>
+</section>
 
-    <section>
-      <h2>Why CHAD?</h2>
-      <p>Because every generation needs a token that laughs, learns, and levels up. CHAD AI adapts to market trends like a real chad. Not just hype – but pure intelligent chaos.</p>
-    </section>
+<section>
+  <h2>Why CHAD?</h2>
+  <p>Because every generation needs a token that laughs, learns, and levels up. CHAD AI adapts to market trends like a real chad. Not just hype – but pure intelligent chaos.</p>
+</section>
 
-    <section>
-      <h2>Tokenomics</h2>
-      <p>
-        Total Supply: 10,000,000,000<br>
-        Owned by Dev: 5,000,000,000<br>
-        Presale + Liquidity: 5,000,000,000<br>
-        Tax: 5% (2% to Dev, 2% Marketing, 1% Burn)
-      </p>
-    </section>
+<section>
+  <h2>Tokenomics</h2>
+  <p>
+    Total Supply: 10,000,000,000<br>
+    Owned by Dev: 5,000,000,000<br>
+    Presale + Liquidity: 5,000,000,000<br>
+    Tax: 5% (2% to Dev, 2% Marketing, 1% Burn)
+  </p>
+</section>
 
-    <section>
-      <h2>\ud83d\ude80 Why Buy Early?</h2>
-      <p>
-        Early buyers always win. When $CHAD goes viral, those who got in early will ride the wave to insane profits.<br>
-        This is your chance to be part of the next meme revolution — not just watch it happen.
-      </p>
-    </section>
+<section>
+  <h2>🚀 Why Buy Early?</h2>
+  <p>
+    Early buyers always win. When $CHAD goes viral, those who got in early will ride the wave to insane profits.<br>
+    This is your chance to be part of the next meme revolution — not just watch it happen.
+  </p>
+</section>
 
-    <section>
-      <h2>What if $CHAD Hits $0.0001?</h2>
-      <p>
-        Investment: $10 → $6,666<br>
-        Investment: $50 → $33,333<br>
-        Investment: $100 → $66,666
-      </p>
-    </section>
+<section>
+  <h2>What if $CHAD Hits $0.0001?</h2>
+  <p>
+    Investment: $10 → $6,666<br>
+    Investment: $50 → $33,333<br>
+    Investment: $100 → $66,666
+  </p>
+</section>
 
-    <section>
-      <h2>Roadmap</h2>
-      <p>
-        \ud83d\udd39 Q1: Token Creation + Website Launch<br>
-        \ud83d\udd39 Q2: Presale + PancakeSwap Listing<br>
-        \ud83d\udd39 Q3: Viral TikTok & Twitter Campaigns<br>
-        \ud83d\udd39 Q4: Partnerships, NFTs, and Beyond
-      </p>
-    </section>
+<section>
+  <h2>Roadmap</h2>
+  <p>
+    🔹 Q1: Token Creation + Website Launch<br>
+    🔹 Q2: Presale + PancakeSwap Listing<br>
+    🔹 Q3: Viral TikTok & Twitter Campaigns<br>
+    🔹 Q4: Partnerships, NFTs, and Beyond
+  </p>
+</section>
 
-    <section id="how-to-buy">
-      <h2>How to Buy</h2>
-      <p>
-        1. Enter the amount you want to invest (USD)<br>
-        2. Choose a currency to pay (BNB, USDT, etc.)<br>
-        3. Copy the wallet address and send the funds<br>
-        4. You will receive your tokens after payment is confirmed
-      </p>
-    </section>
+<section id="how-to-buy">
+  <h2>How to Buy</h2>
+  <p>
+    1. Enter the amount you want to invest (USD)<br>
+    2. Choose a currency to pay (BNB, USDT, etc.)<br>
+    3. Copy the wallet address and send the funds<br>
+    4. You will receive your tokens after payment is confirmed
+  </p>
+</section>
 
-    <section>
-      <h2>Trust & Transparency</h2>
-      <p>
-        ✅ Contract Verified on BSCScan<br>
-        ✅ Liquidity Locked<br>
-        ✅ 100% Community-Focused<br>
-        ✅ No Team Tokens
-      </p>
-      <div class="contract-links">
-        <a href="https://bscscan.com/token/yourtokenaddress">\ud83d\udd17 View Contract on BSCScan</a>
-        <a href="https://dx.app/app/v3/lock/yourlocklink">\ud83d\udd12 View Liquidity Lock</a>
-      </div>
-    </section>
+<section>
+  <h2>Trust & Transparency</h2>
+  <p>
+    ✅ Contract Verified on BSCScan<br>
+    ✅ Liquidity Locked<br>
+    ✅ 100% Community-Focused<br>
+    ✅ No Team Tokens
+  </p>
+  <div class="contract-links">
+    <a href="https://bscscan.com/token/yourtokenaddress">🔗 View Contract on BSCScan</a>
+    <a href="https://dx.app/app/v3/lock/yourlocklink">🔒 View Liquidity Lock</a>
+  </div>
+</section>
 
-    <section class="cta">
-      <h2>Ready to ride the future?</h2>
-      <div class="popup-btn" onclick="openPopup()">Buy $CHAD Now</div>
-    </section>
+<section class="cta">
+  <h2>Ready to ride the future?</h2>
+  <div class="popup-btn" onclick="openPopup()">Buy $CHAD Now</div>
+</section>
 
-    <section class="faq">
-      <h2>FAQ</h2>
-      <div class="faq-item">
-        <h3>What is $CHAD?</h3>
-        <p>$CHAD is the ultimate AI-powered meme token made to dominate trends and the blockchain space.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How do I buy $CHAD?</h3>
-        <p>Use the form above to select a currency and send the funds. We'll handle the rest.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Is there a community?</h3>
-        <p>Yes! Join our growing army on Telegram and Twitter to get the latest news and memes.</p>
-      </div>
-    </section>
+<section class="faq">
+  <h2>FAQ</h2>
+  <div class="faq-item">
+    <h3>What is $CHAD?</h3>
+    <p>$CHAD is the ultimate AI-powered meme token made to dominate trends and the blockchain space.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How do I buy $CHAD?</h3>
+    <p>Use the form above to select a currency and send the funds. We'll handle the rest.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is there a community?</h3>
+    <p>Yes! Join our growing army on Telegram and Twitter to get the latest news and memes.</p>
+  </div>
+</section>
 
-    <footer>
-      <p>
-        <a href="https://t.me/chadai_xyz"><img src="telegram-icon.png" alt="Telegram" width="20"> Telegram</a>
-        <a href="https://twitter.com/chadai_xyz"><img src="twitter-icon.png" alt="Twitter" width="20"> Twitter</a>
-        <a href="mailto:contact@chadai.xyz"><img src="email-icon.png" alt="Email" width="20"> Contact</a>
-      </p>
-    </footer>
+<footer>
+  <p>
+    <a href="https://t.me/chadai_xyz"><img src="telegram-icon.png" alt="Telegram" width="20"> Telegram</a>
+    <a href="https://twitter.com/chadai_xyz"><img src="twitter-icon.png" alt="Twitter" width="20"> Twitter</a>
+    <a href="mailto:contact@chadai.xyz"><img src="email-icon.png" alt="Email" width="20"> Contact</a>
+  </p>
+</footer>
   </div>
 </body>
 </html>
