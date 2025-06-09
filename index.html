@@ -207,6 +207,25 @@
 </head>
 <body>
   <div id="overlay" onclick="closePopup()"></div>
+<div id="popup">
+  <span class="close-icon" onclick="closePopup()">&times;</span>
+  <h2>Buy $CHAD</h2>
+  <p>Presale Price: 1 $CHAD = $0.0000075</p>
+  <input type="number" id="amount" placeholder="Enter amount (USD)" oninput="calculateTokens()" />
+  <p id="result"></p>
+  <select id="currency">
+    <option>BNB (BEP-20)</option>
+    <option>USDT (BEP-20)</option>
+    <option>BUSD (BEP-20)</option>
+    <option>ETH (BEP-20)</option>
+    <option>USDC (BEP-20)</option>
+    <option>DAI (BEP-20)</option>
+  </select><br>
+  <p id="wallet-address" style="margin: 10px 0; font-weight: bold; font-size: 1.1em;">0x2cD3fB599E972e7B322fd11307E35E2847395261</p>
+  <button class="copy-btn" onclick="copyAddress()">Copy Wallet Address</button><br>
+  <p style="margin-top: 10px; font-size: 0.95em;">Copy the wallet address and send the desired amount to it.</p>
+  <a href="https://example.com/payment" target="_blank" class="copy-btn">Send Payment</a>
+</div>
 <div class="container">
   <header>
     <h1>$CHAD AI</h1>
