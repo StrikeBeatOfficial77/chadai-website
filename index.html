@@ -207,6 +207,7 @@
     // إعداد العداد التنازلي
     const countdown = () => {
       const el = document.getElementById("countdown");
+      if (!el) return;
       const targetDate = new Date("2025-06-19T22:00:00").getTime();
       const update = () => {
         const now = new Date().getTime();
@@ -224,7 +225,7 @@
       update();
       setInterval(update, 1000);
     };
-    window.onload = countdown;
+    document.addEventListener("DOMContentLoaded", countdown);
   </script>
 </head>
 <body>
@@ -273,7 +274,7 @@ Amount Sent: $50 (in BNB)
       <p style="text-align: center; font-size: 1.3em; color: #00ffaa; margin-top: 30px; text-shadow: 0 0 10px #00ffaa;">
         ✨ Get in early before the presale ends!
       </p>
-      <div id="countdown" style="text-align: center; font-size: 2em; font-weight: bold; margin: 20px 0; color: #ffffff; text-shadow: 0 0 15px #00ffbf;"></div>
+      <div id="countdown" style="text-align: center; font-size: 2em; font-weight: bold; margin: 20px 0; color: #ffffff; text-shadow: 0 0 15px #00ffbf; word-wrap: break-word; max-width: 100%;"></div>
       <p style="text-align: center; font-size: 1.1em; color: #00ffee; margin-bottom: 40px;">
         💰 Only <strong>675,000,000 $CHAD</strong> available at <strong>$0.0000075</strong> each – Act fast!
       </p>
